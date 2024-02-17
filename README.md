@@ -1,2 +1,2 @@
-# yo
+# YO
 multi user communication application

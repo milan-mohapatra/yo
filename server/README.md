@@ -53,20 +53,20 @@ payload: {
 
 |  | METHOD | PATH | AUTH | ACCESS | BODY | RESPONSE | DESCRIPTION |
 |--|--------|------|------|--------|------|----------|-------------|
-| 1. | POST | `/auth/signup` | NA | public | `{name, email, password, avatar}` | `token` | user registration |
-| 2. | POST | `/auth/login` | NA | public | `{email, password}` | `token` | user login |
-| 3. | POST | `/auth/logout` | user | private | NA | `token` | user logout |
-| 4. | GET | `/users/account` | user | private | NA | `{user}` | get user info |
-| 5. | PUT | `/users` | user | private | `{name, email, password, avatar}` | `message` | update user info |
-| 6. | PUT | `/users` | user | private | NA | `message` | delete account |
-| 7. | DELETE | `/admin/users/:userId` | admin | NA | NA | `message` | delete a user |
-| 8. | POST | `/groups` | user.admin | NA | `{name, avatar, [members]}` | `message` | create a group |
-| 9. | GET | `/groups/account` | user.member | private | NA | `{group}` | get group info |
-| 10. | PUT | `/groups` | user.admin | private | `{name, avatar, [members]}` | `message` | update group info by group admin |
-| 11. | DELETE | `/groups` | user.admin | private | NA | `message` | delete group by group admin |
-| 12. | PUT | `/groups/kick/userId` | user.admin | private | NA | `message` | kick a user from group by group admin |
-| 13. | PUT | `/users/leave/groupId` | user.member | private | NA | `message` | leave group by group member (except group.admin) |
-| 14. | DELETE | `/admin/groups` | admin | NA | NA | `message` | delete a group by admin |
-| 15. | GET | `/messages/groups/:groupId` | user.member | private | NA | `[{message}]` | get group conversation by group member |
-| 16. | POST | `/messages/send/:receiverId` | user | private | `{payload}` | `{message}` | send a message |
-| 17. | GET | `/messages/:receiverId` | user | private | NA | `[{message}]` | get all conversation btn sender & receiver7 
+| 1. | POST | `/api/auth/signup` | NA | public | `{name, email, password, avatar}` | `token` | user registration |
+| 2. | POST | `/api/auth/login` | NA | public | `{email, password}` | `token` | user login |
+| 3. | POST | `/api/auth/logout` | user | private | NA | `token` | user logout |
+| 4. | GET | `/api/users/account` | user | private | NA | `{user}` | get user info |
+| 5. | PUT | `/api/users` | user | private | `{name, email, password, avatar}` | `message` | update user info |
+| 6. | PUT | `/api/users` | user | private | NA | `message` | delete account |
+| 7. | DELETE | `/api/admin/users/:userId` | admin | NA | NA | `message` | delete a user |
+| 8. | POST | `/api/groups` | user.admin | NA | `{name, avatar, [members]}` | `message` | create a group |
+| 9. | GET | `/api/groups/account` | user.member | private | NA | `{group}` | get group info |
+| 10. | PUT | `/api/groups` | user.admin | private | `{name, avatar, [members]}` | `message` | update group info by group admin |
+| 11. | DELETE | `/api/groups` | user.admin | private | NA | `message` | delete group by group admin |
+| 12. | PUT | `/api/groups/kick/userId` | user.admin | private | NA | `message` | kick a user from group by group admin |
+| 13. | PUT | `/api/users/leave/groupId` | user.member | private | NA | `message` | leave group by group member (except group.admin) |
+| 14. | DELETE | `/api/admin/groups` | admin | NA | NA | `message` | delete a group by admin |
+| 15. | GET | `/api/messages/groups/:groupId` | user.member | private | NA | `[{message}]` | get group conversation by group member |
+| 16. | POST | `/api/messages/send/:receiverId` | user | private | `{payload}` | `{message}` | send a message |
+| 17. | GET | `/api/messages/:receiverId` | user | private | NA | `[{message}]` | get all conversation btn sender & receiver7 

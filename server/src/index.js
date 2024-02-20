@@ -1,8 +1,7 @@
-import dotenv from "dotenv"
-dotenv.config()
+require("dotenv").config()
 
-import express from "express"
-import connectDB from "./config/db.mjs"
+const express = require("express")
+const connectDB = require("./config/db.js")
 
 connectDB()
 

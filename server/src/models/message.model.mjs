@@ -6,6 +6,7 @@ const payloadSchema = new mongoose.Schema({
 })
 
 const messageSchema = new mongoose.Schema({
+    isGroupMessage: Boolean, // default false
     senderId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
@@ -13,7 +14,7 @@ const messageSchema = new mongoose.Schema({
     receiverId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
-    },
+    }, // userId / groupId
     payload: payloadSchema
 }, {timestamps: true})
 

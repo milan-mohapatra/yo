@@ -7,12 +7,12 @@ const groupSchema = new mongoose.Schema(
     admin: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
-    }, // custom: is available
+    },
     members: [
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
-      }, // min 3
+      },
     ],
   },
   { timestamps: true }

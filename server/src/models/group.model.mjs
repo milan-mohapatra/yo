@@ -14,6 +14,7 @@ const groupSchema = new mongoose.Schema(
         ref: "User",
       },
     ],
+    isDeleted: Boolean
   },
   { timestamps: true }
 );

@@ -1,7 +1,7 @@
 const express = require("express")
-const userController = require("../controllers/user.controller")
-const groupController = require("../controllers/group.controller")
-const chartController = require("../controllers/chart.controller")
+const userController = require("../controllers/user.controller.js")
+const groupController = require("../controllers/group.controller.js")
+const chartController = require("../controllers/chart.controller.js")
 const route = express.Router()
 
 route.route("/users/:userId").delete(userController.deleteAUser)

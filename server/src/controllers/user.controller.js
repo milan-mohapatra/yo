@@ -1,6 +1,15 @@
 const userController = {}
 
 /*
+GET /api/users/
+Auth: yes
+Access: public
+*/
+userController.getContacts = async (req, res) => {
+    res.json({controller: "getContacts"})
+}
+
+/*
 GET /api/users/account
 Auth: yes
 Access: public

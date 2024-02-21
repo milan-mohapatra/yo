@@ -1,3 +1,5 @@
+const {CustomError} = require("../utils/errors.js")
+
 const authController = {}
 
 /*
@@ -5,7 +7,7 @@ POST /api/auth/signup
 Auth: no
 Access: public
 */
-authController.signup = async (req, res) => {
+authController.signup = async (req, res, next) => {
     res.json({controller: "signup"})
 }
 

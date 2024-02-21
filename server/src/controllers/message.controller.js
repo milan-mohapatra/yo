@@ -1,29 +1,29 @@
 const messageController = {}
 
 /*
-GET /api/messages/groups/:groupId
-Auth: user.member
+GET	/api/messages/groups/:groupId
+Auth: group_member
 Access: private
 */
-groupController.getGroupConversation = async (req, res) => {
+messageController.getGroupConversation = async (req, res) => {
     res.json({controller: "getGroupConversation"})
 }
 
 /*
 POST /api/messages/send/:receiverId
-Auth: user
+Auth: user or group_member
 Access: private
 */
-groupController.sendMessage = async (req, res) => {
+messageController.sendMessage = async (req, res) => {
     res.json({controller: "sendMessage"})
 }
 
 /*
 GET /api/messages/:receiverId
-Auth: user
+Auth: yes
 Access: private
 */
-groupController.getConversation = async (req, res) => {
+messageController.getConversation = async (req, res) => {
     res.json({controller: "getConversation"})
 }
 

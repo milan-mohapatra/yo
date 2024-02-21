@@ -2,7 +2,7 @@ const userController = {}
 
 /*
 GET /api/users/account
-Auth: user
+Auth: yes
 Access: public
 */
 userController.getUserInfo = async (req, res) => {
@@ -10,8 +10,8 @@ userController.getUserInfo = async (req, res) => {
 }
 
 /*
-PUT /api/users
-Auth: user
+PUT /api/users/update
+Auth: yes
 Access: private
 */
 userController.updateUserInfo = async (req, res) => {
@@ -20,7 +20,7 @@ userController.updateUserInfo = async (req, res) => {
 
 /*
 PUT /api/users/delete
-Auth: user
+Auth: yes
 Access: private
 */
 userController.deleteAccount = async (req, res) => {

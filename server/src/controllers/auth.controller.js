@@ -2,7 +2,7 @@ const authController = {}
 
 /*
 POST /api/auth/signup
-Auth: NA
+Auth: no
 Access: public
 */
 authController.signup = async (req, res) => {
@@ -11,7 +11,7 @@ authController.signup = async (req, res) => {
 
 /*
 POST /api/auth/login
-Auth: NA
+Auth: no
 Access: public
 */
 authController.login = async (req, res) => {
@@ -20,7 +20,7 @@ authController.login = async (req, res) => {
 
 /*
 GET /api/auth/logout
-Auth: user
+Auth: yes
 Access: private
 */
 authController.logout = async (req, res) => {

@@ -74,11 +74,12 @@ payload: {
 | 8. | POST |/api/groups/create | yes | NA | `{name, avatar, [members]}` | `message` | create a group |
 | 9. | GET |/api/groups/account/:groupId	| group_member | public | NA | `{group}` | get group account info |
 | 10. | PUT |/api/groups/update/:groupId	| group_admin | NA | `{name, avatar, [members]}` | `message` | update group info by group admin |
-| 11. | PUT |/api/groups/delete/:groupId	| group_admin | NA | NA | `message` | soft delete group by group admin |
+| 11. | DELETE |/api/groups/delete/:groupId	| group_admin | NA | NA | `message` | delete group by group admin |
 | 12. | PUT |/api/groups/:groupId/kick/:userId	| group_admin |	NA | `{name, avatar, [members]}` | `message` | kick a member from group by group admin |
 | 13. | PUT |/api/groups/:groupId/leave | group_member |	private | `{name, avatar, [members]}` | `message` | leave a group by group member |
 | 14. | DELETE |/api/admin/groups/:groupId | admin |	NA | NA | `message` | delete a group by admin |
 | 15. | GET |/api/messages/groups/:groupId | group_member | private | NA | `[{message}]` | get group conversation by group member |
 | 16. | POST |/api/messages/send/:receiverId | user or group_member | private | `{payload}` | `{message}` | send a message |
 | 17. | GET |/api/messages/:receiverId | yes |	private | NA | `[{message}]` | get all conversation between sender & receiver |
-| 18. | GET |/api/charts	| yes |	private | NA | `[{user}, {group}]` | get all, where sender have conversion history |
+| 18. | GET |/api/charts | yes |	private | NA | `[{user}, {group}]` | get all, where sender have conversion history |
+| 19. | GET |/api/admin/entries | admin |	NA | NA | `[{user}, {group}]` | get all users and members available in system |

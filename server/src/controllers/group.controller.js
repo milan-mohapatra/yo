@@ -1,8 +1,8 @@
 const groupController = {}
 
 /*
-POST /api/groups
-Auth: user.admin
+POST /api/groups/create
+Auth: yes
 Access: NA
 */
 groupController.createGroup = async (req, res) => {
@@ -10,54 +10,45 @@ groupController.createGroup = async (req, res) => {
 }
 
 /*
-GET /api/groups/account
-Auth: user.member
-Access: private
+GET	/api/groups/account/:groupId
+Auth: group_member
+Access: NA
 */
 groupController.getGroupInfo = async (req, res) => {
     res.json({controller: "getGroupInfo"})
 }
 
 /*
-PUT /api/groups
-Auth: user.admin
-Access: private
+PUT	/api/groups/update/:groupId
+Auth: group_admin
+Access: NA
 */
 groupController.updateGroupInfo = async (req, res) => {
     res.json({controller: "updateGroupInfo"})
 }
 
 /*
-DELETE /api/groups
-Auth: user.admin
-Access: private
+DELETE	/api/groups/delete/:groupId
+Auth: group_admin
+Access: NA
 */
 groupController.deleteGroup = async (req, res) => {
     res.json({controller: "deleteGroup"})
 }
 
 /*
-PUT /api/groups/kick/userId
-Auth: user.admin
-Access: private
+PUT /api/groups/:groupId/kick/:userId
+Auth: group_admin
+Access: NA
 */
-groupController.kickUser = async (req, res) => {
-    res.json({controller: "kickUser"})
-}
-
-/*
-PUT /api/groups/kick/userId
-Auth: user.admin
-Access: private
-*/
-groupController.kickUser = async (req, res) => {
-    res.json({controller: "kickUser"})
+groupController.kickMember = async (req, res) => {
+    res.json({controller: "kickMember"})
 }
 
 /*
 PUT /api/groups/leave/:groupId
-Auth: user.member
-Access: private
+Auth: group_admin
+Access: NA
 */
 groupController.leaveGroup = async (req, res) => {
     res.json({controller: "leaveGroup"})

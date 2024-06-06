@@ -1,0 +1,19 @@
+{
+  "name": "yo-server",
+  "version": "1.0.0",
+  "author": "Milan Mohapatra",
+  "description": "This is API of a multimedia chart application.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./src/index.js"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
